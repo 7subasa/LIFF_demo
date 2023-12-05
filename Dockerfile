@@ -5,6 +5,9 @@ FROM httpd:2.4
 RUN apt-get update && \
     apt-get install -y nodejs npm
 
+# Netlify CLIをグローバルにインストール
+RUN npm install -g netlify-cli
+
 # publicディレクトリをコンテナのApacheサーブディレクトリにコピー
 COPY ./public/ /usr/local/apache2/htdocs/
 
