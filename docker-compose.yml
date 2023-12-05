@@ -9,3 +9,10 @@ services:
       - "80:80"
     volumes:
       - ./public:/usr/local/apache2/htdocs
+    environment:
+      # Netlifyトークン紐付け
+      - NETLIFY_AUTH_TOKEN=nfp_D5UVRWCcZC2QioCNuc1BbnTLKQfQaRwR0a87
+      # LIFF_ID
+      - LIFF_ID=2002045846-Kdzee704
+
+
