@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Page</title>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.22.3/sdk.js"></script>
+</head>
+<body>
+    <h1>これはdemoページです</h1>
+    <p>demodemodemo</p>
+    <p id="demo"></p>
+    <script>
+        // LIFFアプリの初期化, ログイン処理
+        liff.init({
+            liffId: '2002045846',
+            withLoginOnExternalBrowser: true,
+        }).then(() => {
+            // 初期化時に動作させたいものを記述
+            const demo = document.getElementById('demo');
+            demo.innerText = 'jsによる文字置き換え';
+        });
+
+    </script>
+</body>
+</html>
